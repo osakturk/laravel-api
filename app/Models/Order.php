@@ -48,6 +48,8 @@ class Order extends Model
         'order_code', 'product_id', 'quantity', 'address', 'user_id'
     ];
 
+    protected $guarded = [];
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
